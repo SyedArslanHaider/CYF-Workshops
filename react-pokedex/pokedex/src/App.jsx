@@ -10,10 +10,13 @@ function App(){
   const date = new Date().toLocaleDateString();
   return(
     <>
-    <Logo appName="Pokedex"/>
+    <Logo appName="Pokedex" handleClick={logWhenClicked}/>
     <BestPokemon abilities={abilities_new}/>
     <CaughtPokemon date={date}/>
     </>
   ); 
+}
+function logWhenClicked(){
+  console.log("it doesn't matter what the message is)")
 }
 export default App

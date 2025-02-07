@@ -1,10 +1,20 @@
 import PropTypes from 'prop-types';
-function  CaughtPokemon(props){
+import { useState } from 'react';
+function  caughtPokemon(props){
+ const [caught, setCaught] = useState(0);
+
+  // Function to update state when button is clicked
+  const catchPokemon = () => {
+    setCaught(caught + 1); // Increase caught count by 1
+  };
  return(
-  <p>Caught 0 Pokemon {props.date}</p>
+  <>
+  <p>Caught {caught} Pokemon {props.date}</p>
+  <button onClick={catchPokemon}>caughtPokemon</button>
+  </>
  );
 }
-CaughtPokemon.propTypes={
+caughtPokemon.propTypes={
   date: PropTypes.number.isRequired
 }
-export default CaughtPokemon
+export default caughtPokemon
