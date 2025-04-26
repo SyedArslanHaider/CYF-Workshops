@@ -9,6 +9,7 @@ return(
 }
 
 Logo.propTypes={
-  appName: PropTypes.string.isRequired
+  appName: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
 }
 export default Logo

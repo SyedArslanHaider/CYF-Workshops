@@ -12,7 +12,7 @@ function App(){
     <>
     <Logo appName="Pokedex" handleClick={logWhenClicked}/>
     <BestPokemon abilities={abilities_new}/>
-    <CaughtPokemon date={date}/>
+    <CaughtPokemon date={date} />
     </>
   ); 
 }
