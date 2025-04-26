@@ -21,6 +21,11 @@ export function ProfilePreview(profile, options = {}) {
   preview.appendChild(bio);
 
   // TODO: If showAdditionalInfo is true, add a new <p> with "Click to view full profile"
-
+  // ✅ ADDITIONAL INFO implementation
+  if (showAdditionalInfo) {
+    const additionalInfo = document.createElement("p");
+    additionalInfo.textContent = "Click to view full profile";
+    preview.appendChild(additionalInfo);
+  }
   return preview;
 }
