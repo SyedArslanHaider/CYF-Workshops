@@ -20,6 +20,7 @@ export function Voter(updateVote) {
         button.remove();
       })
       .catch(() => {
+        const errorMessage = document.createElement("p");
         errorMessage.textContent =
           "We could not process your vote, please try again later.";
         container.appendChild(errorMessage);
